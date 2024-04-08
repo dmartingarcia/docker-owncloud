@@ -34,7 +34,7 @@ services:
       - "traefik.http.routers.owncloud.tls.certresolver=lets-encrypt"
       - "traefik.port=8080"
     volumes:
-      - ./data:/mnt/data
+      - ${ROOT_DIR}:/mnt/data
     networks:
       - internal
       - web
